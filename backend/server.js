@@ -11,8 +11,9 @@ const routeeee = require("./routes/workouts");
 const app = express();
 
 //middleware
-app.use(cors()); // 👈 ADD THIS
+
 app.use(express.json());
+app.use(cors()); // 👈 ADD THIS
 app.use((req, res, next) => {
   console.log(req.path, req.method);
   next();
